@@ -6,7 +6,14 @@ export function SiteFooter() {
         <p>© {year} hotelfindr. All rights reserved.</p>
         <p>
           Developed by{" "}
-          <span className="font-semibold text-ink-700">Ebn Sina</span>
+          <a
+            href="https://m.me/ebnsina.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-ink-700 underline-offset-2 hover:text-brand-700 hover:underline"
+          >
+            Ebn Sina
+          </a>
         </p>
       </div>
     </footer>
