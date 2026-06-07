@@ -3,8 +3,8 @@ import { Link } from "react-router";
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-sand-200/70 bg-sand-50/80 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 sm:px-6 py-3.5">
-        <Link to="/" className="flex items-center gap-2">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 sm:px-6 py-3.5">
+        <Link to="/" className="flex shrink-0 items-center gap-2">
           <span className="grid h-8 w-8 place-items-center rounded-xl bg-brand-600 text-white shadow-sm">
             <svg
               viewBox="0 0 24 24"
@@ -22,18 +22,20 @@ export function SiteHeader() {
             hotel<span className="text-brand-600">findr</span>
           </span>
         </Link>
-        <nav className="flex items-center gap-1 text-sm">
+        <nav className="flex shrink-0 items-center gap-0.5 text-sm sm:gap-1">
           <Link
             to="/search"
-            className="rounded-full px-3 py-2 font-medium text-ink-600 transition hover:bg-sand-100 hover:text-ink-900 sm:px-4"
+            className="rounded-full px-2.5 py-2 font-medium text-ink-600 transition hover:bg-sand-100 hover:text-ink-900 sm:px-4"
           >
-            Browse hotels
+            <span className="sm:hidden">Hotels</span>
+            <span className="hidden sm:inline">Browse hotels</span>
           </Link>
           <Link
             to="/track"
-            className="rounded-full px-3 py-2 font-medium text-ink-600 transition hover:bg-sand-100 hover:text-ink-900 sm:px-4"
+            className="rounded-full px-2.5 py-2 font-medium text-ink-600 transition hover:bg-sand-100 hover:text-ink-900 sm:px-4"
           >
-            Track booking
+            <span className="sm:hidden">Track</span>
+            <span className="hidden sm:inline">Track booking</span>
           </Link>
         </nav>
       </div>
